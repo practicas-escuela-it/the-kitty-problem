@@ -1,21 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Controller.Repositories;
 
-namespace Services
+namespace Controller
 {
     public class TaxiFinder
     {
-        public TaxiFinder()
+        private readonly TaxiGetter _taxiGetter;
+
+        public TaxiFinder(TaxiGetter taxiGetter)
         {
+            this._taxiGetter = taxiGetter;
         }
 
-
-        public List<Taxi> Find(string? destination, bool withCat)
+        public List<TaxiDTO> Find(string? destination, bool withCat)
         {
-            throw new NotImplementedException();
+            if (destination is null)
+            {
+                throw new ArgumentException("");
+            }
+
+            if (withCat)
+            {
+                this._taxiGetter.GetTaxis();
+            }
+            else
+            {
+                // call service 2
+            }
+
+
+            return null;
         }
     }
 }

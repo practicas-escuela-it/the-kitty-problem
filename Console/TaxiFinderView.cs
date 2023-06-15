@@ -1,20 +1,16 @@
-﻿using Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Controller;
+using Repository;
 
 namespace View
 {
-    internal class TaxiFinderView
+    public class TaxiFinderView
     {
         private TaxiFinder _taxFinder;
-        private List<Taxi> _taxisFound;
+        private List<TaxiDTO> _taxisFound;
 
         public TaxiFinderView()
         {
-            this._taxFinder = new TaxiFinder();
+            this._taxFinder = new TaxiFinder(new TaxiRepository());
         }
 
         internal void Interact()
@@ -28,7 +24,7 @@ namespace View
             this._taxisFound = this._taxFinder.Find(destination, withCat);
             Console.WriteLine("Taxis encontrados:");
 
-            foreach (Taxi taxi in this._taxisFound)
+            foreach (TaxiDTO taxi in this._taxisFound)
             {
                 Console.WriteLine($"{taxi.Name} - ${taxi.Price}");
             }
@@ -39,7 +35,7 @@ namespace View
             return this._taxisFound.Any();
         }
 
-        internal List<Taxi> GetTaxiFound()
+        internal List<TaxiDTO> GetTaxiFound()
         {
             return this._taxisFound;
         }

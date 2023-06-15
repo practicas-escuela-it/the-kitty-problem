@@ -1,9 +1,4 @@
-﻿using Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Controller;
 
 namespace View
 {
@@ -19,21 +14,31 @@ namespace View
         internal void Interact()
         {
             Console.WriteLine("1- Buscar taxi");
-            Console.WriteLine("1- Cerrar aplicación");
+            Console.WriteLine("2- Cerrar aplicación");
 
             if (Console.ReadLine() == "1")
             {
                 this._taxiFinderView.Interact();
                 List<Taxi> taxis = this._taxiFinderView.GetTaxiFound();
 
-                Console.WriteLine($"Taxi encontrado: {taxi.Name} - ${taxi.Price}");
+                foreach (Taxi taxi in taxis)
+                {
+                    Console.WriteLine($"Taxi encontrado: {taxi.Name} - ${taxi.Price}");
+                }
+
                 Console.WriteLine("1- Reservar");
                 Console.WriteLine("2- Cancelar");
+
                 if (Console.ReadLine() == "1")
                 {
-                    new TaxiSelector(taxi).Select();
+                    new TaxiSelector(this.GetSelectedTaxi()).Select();
                 }
             }
+        }
+
+        private Taxi GetSelectedTaxi()
+        {
+            return new Taxi();
         }
     }
 }
