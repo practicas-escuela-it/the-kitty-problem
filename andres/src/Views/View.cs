@@ -13,6 +13,6 @@ namespace TheKittyProblem
         internal void interact()
         {
             this._controller.doSome();
-    }
+        }
     }
 }
