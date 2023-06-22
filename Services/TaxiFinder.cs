@@ -1,14 +1,14 @@
-﻿using Controller.Repositories;
+﻿using Repository;
 
 namespace Controller
 {
     public class TaxiFinder
     {
-        private readonly TaxiGetter _taxiGetter;
+        private readonly TaxiRepository _repository;
 
-        public TaxiFinder(TaxiGetter taxiGetter)
+        public TaxiFinder(TaxiRepository repository)
         {
-            this._taxiGetter = taxiGetter;
+            this._repository = repository;
         }
 
         public List<TaxiDTO> Find(string? destination, bool withCat)
@@ -20,7 +20,7 @@ namespace Controller
 
             if (withCat)
             {
-                this._taxiGetter.GetTaxis();
+                this._repository.GetTaxis();
             }
             else
             {

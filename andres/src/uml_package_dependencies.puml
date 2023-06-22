@@ -1,9 +1,0 @@
-@startuml  
-package Views
-package Models
-package Controllers
-package Repositories
-Views ..> Controllers
-Controllers ..> Repositories
-Controllers ..> Models
-@enduml

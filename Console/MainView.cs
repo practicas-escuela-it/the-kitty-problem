@@ -1,4 +1,5 @@
 ﻿using Controller;
+using Model;
 
 namespace View
 {
@@ -19,9 +20,9 @@ namespace View
             if (Console.ReadLine() == "1")
             {
                 this._taxiFinderView.Interact();
-                List<Taxi> taxis = this._taxiFinderView.GetTaxiFound();
+                List<TaxiDTO> taxis = this._taxiFinderView.GetTaxiFound();
 
-                foreach (Taxi taxi in taxis)
+                foreach (TaxiDTO taxi in taxis)
                 {
                     Console.WriteLine($"Taxi encontrado: {taxi.Name} - ${taxi.Price}");
                 }

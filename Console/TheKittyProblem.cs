@@ -1,4 +1,8 @@
 ﻿using Controller;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Model;
+using Repository;
 
 namespace View
 {
@@ -6,6 +10,7 @@ namespace View
     {
         public static void Main()
         {
+            ConfigureDependencies();
             new TheKittyProblem().Do();
         }
 
@@ -23,7 +28,7 @@ namespace View
                 Console.WriteLine("¿Vas con gato?");
                 bool withCat = Console.ReadLine() == "S";
 
-                Taxi taxi = new TaxiFinder(destination, withCat).Find();
+                Taxi taxi = new TaxiFinder().Find(destination, withCat);
 
                 Console.WriteLine($"Taxi encontrado: {taxi.Name} - ${taxi.Price}");
                 Console.WriteLine("1- Reservar");
@@ -33,8 +38,14 @@ namespace View
                     new TaxiSelector(taxi).Select();
                 }
             }
+        }
 
-
+        private static void ConfigureDependencies()
+        {
+            IHost host = Host.CreateDefaultBuilder()
+                .ConfigureServices((_, services) => services
+                .AddTransient<TaxiRepository, Repository.SQL.TaxiRepository>())
+                .Build();
         }
     }
 }

@@ -1,14 +1,14 @@
-﻿using Controller;
+﻿using Model;
 
 namespace View
 {
     internal class TaxiSelector
     {
-        private Taxi taxi;
+        private Taxi _taxi;
 
         public TaxiSelector(Taxi taxi)
         {
-            this.taxi = taxi;
+            this._taxi = taxi;
         }
 
         internal void Select()

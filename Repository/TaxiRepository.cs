@@ -1,14 +1,9 @@
-﻿using Controller.Repositories;
-using Model;
+﻿using Model;
 
 namespace Repository
 {
-    public class TaxiRepository : TaxiGetter
+    public interface TaxiRepository
     {
-        public List<Taxi> GetTaxis()
-        {
-            string query = "SELECT * FROM Taxis";
-            throw new NotImplementedException();
-        }
+        List<Taxi> GetTaxis();
     }
 }
