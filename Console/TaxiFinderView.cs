@@ -1,32 +1,27 @@
 ﻿using Controller;
-using Repository;
+using Controller.Models;
+using Shared;
 
 namespace View
 {
     public class TaxiFinderView
     {
         private TaxiFinder _taxFinder;
-        private List<TaxiDTO> _taxisFound;
+        private IEnumerable<TaxiFound> _taxisFound;
 
-        public TaxiFinderView()
+        public TaxiFinderView(TaxiFinder taxiFinder)
         {
-            this._taxFinder = new TaxiFinder(new TaxiRepository());
+            Assert.NotNull(taxiFinder);
+            this._taxFinder = taxiFinder;
         }
 
         internal void Interact()
-        {
-            Console.WriteLine("Ingresá tu destino");
-            string? destination = Console.ReadLine();
-
-            Console.WriteLine("¿Vas con gato?");
-            bool withCat = Console.ReadLine() == "S";
-
-            this._taxisFound = this._taxFinder.Find(destination, withCat);
+        {          
+            this._taxisFound = this._taxFinder.Invoke();
             Console.WriteLine("Taxis encontrados:");
-
-            foreach (TaxiDTO taxi in this._taxisFound)
+            foreach (TaxiFound taxi in this._taxisFound)
             {
-                Console.WriteLine($"{taxi.Name} - ${taxi.Price}");
+                new TaxiView(taxi).Interact();
             }
         }
 
@@ -35,7 +30,7 @@ namespace View
             return this._taxisFound.Any();
         }
 
-        internal List<TaxiDTO> GetTaxiFound()
+        internal IEnumerable<TaxiFound> GetTaxiFound()
         {
             return this._taxisFound;
         }

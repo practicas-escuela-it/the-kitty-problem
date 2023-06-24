@@ -1,18 +1,19 @@
 ﻿using Controller;
-using Model;
 
 namespace View
 {
-    internal class MainView
+    public class MainView
     {
-        private TaxiFinderView _taxiFinderView;
+        private readonly TaxiFinderView _taxiFinderView;
+        private readonly TaxiSelectorView _taxiSelectorView;
 
-        public MainView()
+        public MainView(TaxiFinder taxiFinder, TaxiSelector taxiSelector, ConfirmTrip confirmTrip)
         {
-            this._taxiFinderView = new TaxiFinderView();
+            this._taxiFinderView = new TaxiFinderView(taxiFinder);
+            this._taxiSelectorView = new TaxiSelectorView(taxiSelector, confirmTrip);
         }
 
-        internal void Interact()
+        public void Interact()
         {
             Console.WriteLine("1- Buscar taxi");
             Console.WriteLine("2- Cerrar aplicación");
@@ -20,26 +21,8 @@ namespace View
             if (Console.ReadLine() == "1")
             {
                 this._taxiFinderView.Interact();
-                List<TaxiDTO> taxis = this._taxiFinderView.GetTaxiFound();
-
-                foreach (TaxiDTO taxi in taxis)
-                {
-                    Console.WriteLine($"Taxi encontrado: {taxi.Name} - ${taxi.Price}");
-                }
-
-                Console.WriteLine("1- Reservar");
-                Console.WriteLine("2- Cancelar");
-
-                if (Console.ReadLine() == "1")
-                {
-                    new TaxiSelector(this.GetSelectedTaxi()).Select();
-                }
+                this._taxiSelectorView.Interact(this._taxiFinderView.GetTaxiFound());
             }
-        }
-
-        private Taxi GetSelectedTaxi()
-        {
-            return new Taxi();
         }
     }
 }
