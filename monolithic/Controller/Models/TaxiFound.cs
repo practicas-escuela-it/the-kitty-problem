@@ -14,6 +14,8 @@ namespace Controller.Models
             this.Id = taxi.Id;
             this.Name = taxi.Name;
             this.Price = taxi.Price;
+            this.AcceptCat = taxi.AcceptCat;
+            this.IsPremium = taxi.IsPremium;
         }
 
         public int Id { get; set; }

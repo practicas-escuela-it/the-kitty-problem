@@ -4,7 +4,7 @@ namespace Repository
 {
     public interface TaxiSupplierRepository
     {
-        List<TaxiSupplier> GetAllAvailable();
+        IEnumerable<TaxiSupplier> GetAllAvailable();
         void UpdateTaxiAvailability(int taxiId, bool isAvailable);
     }
 }

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TaxiDispatcher.API.props" />
+</Project>

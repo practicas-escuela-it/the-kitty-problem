@@ -15,14 +15,28 @@ namespace Controller
             this._tripRepository = tripRepository;
         }
 
-        public void Invoke(TaxiFound taxiFound)
+        public Trip Invoke(TaxiFound taxiFound, string destinationAddress)
         {
-            var trip = new Trip()
+            Trip trip = new Trip()
             {
-                TripId = 1,
-                TaxiId = taxiFound.Id,
+                TripId = new Random().Next(100),
+                Id = taxiFound.Id,
+                DestinationAddress = destinationAddress,
+                TheoricalPrice = taxiFound.Price * this.GetDistance(destinationAddress),
             };
+
             this._tripRepository.Insert(trip);
+            return trip;
+        }
+
+        private int GetDistance(string destinationAddress)
+        {
+            return new Random().Next(100);
+        }
+
+        public Trip GetTrip(int id)
+        {
+            return this._tripRepository.Get(id);
         }
     }
 }

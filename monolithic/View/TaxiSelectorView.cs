@@ -1,5 +1,6 @@
 ﻿using Controller;
 using Controller.Models;
+using Model;
 using Shared;
 
 namespace View
@@ -25,10 +26,10 @@ namespace View
             criteria.DestinationAddress = Console.ReadLine() ?? "";
 
             Console.WriteLine("¿Vas con gato?");
-            criteria.IsCatRequired = Console.ReadLine() == "S";
+            criteria.IsCatRequired = Console.ReadLine() == "s";
 
             Console.WriteLine("¿Coche premium?");
-            criteria.IsPremiumCar = Console.ReadLine() == "S";
+            criteria.IsPremiumCar = Console.ReadLine() == "s";
 
             TaxiFound taxiFound = this._taxiSelector.Select(taxiFounds, criteria);
 
@@ -36,9 +37,10 @@ namespace View
             Console.WriteLine($"Precio: {taxiFound.Price}");
             Console.WriteLine("¿Desea continuar?");
 
-            if (Console.ReadLine() == "S")
+            if (Console.ReadLine() == "s")
             {
-                this._confirmTrip.Invoke(taxiFound);
+                Trip trip = this._confirmTrip.Invoke(taxiFound, criteria.DestinationAddress);
+                new TripView(trip).Interact();
             }
         }
     }

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TaxiFinder.API.Domain;
 
 namespace TaxiFinder.API.Controllers
 {
@@ -8,15 +9,15 @@ namespace TaxiFinder.API.Controllers
     {
         private readonly TaxiFinderService _taxiFinderService;
 
-        public Finder(TaxiFinderService taxiFinderService)
+        public FinderController(TaxiFinderService taxiFinderService)
         {
             this._taxiFinderService = taxiFinderService;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<TaxiFound> Get()
         {
-           this._taxiFinderService.GetAll();
+            return this._taxiFinderService.Invoke();
         }
     }
 }

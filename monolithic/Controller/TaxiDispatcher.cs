@@ -19,12 +19,12 @@ namespace Controller
 
         private void DisableTaxi(TaxiFound taxiFound)
         {
-            this._taxiSupplierRepository.UpdateTaxiAvailability(taxiFound, false);
+            this._taxiSupplierRepository.UpdateTaxiAvailability(taxiFound.Id, false);
         }
 
         private void EnableTaxi(TaxiFound taxiFound)
         {
-            this._taxiSupplierRepository.UpdateTaxiAvailability(taxiFound, true);
+            this._taxiSupplierRepository.UpdateTaxiAvailability(taxiFound.Id, true);
         }
     }
 }

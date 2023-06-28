@@ -1,8 +1,10 @@
+using TaxiFinder.API.Models;
+
 namespace TaxiFinder.API.Domain
 {
     public interface TaxiFinderRepository
     {
-        List<Taxi> GetAl();
+        List<Taxi> GetAll();
         List<Taxi> GetBySupplier(int supplierId);
     }
 }
