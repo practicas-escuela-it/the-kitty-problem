@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VQpNQwUx0AZzqUrp7bLExXWVRHlb69yCXk5ssfbg46NfWwnYwmRUxrdsmvvy6Ni7ornz0kTEt9rfuiWpb6il1g==",
+  "dgSpecHash": "5tp/uc6UiLEW6/QM4Ij07isRcul6ZTi80blfevDCNBzXCgbQvYq9evkRSmofWo21wOG4TvJn4fHPbnsetGIw+w==",
   "success": true,
   "projectFilePath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\View\\View.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

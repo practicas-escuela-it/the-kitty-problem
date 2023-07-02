@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "View", "View\View.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiFinder.API", "TaxiFinder.API\TaxiFinder.API.csproj", "{07267DF9-DF13-464A-AE4F-18F01BF6C374}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiSelecter.API", "TaxiSelecter.API\TaxiSelecter.API.csproj", "{49768BD2-9022-4F63-9D7D-8D09CD5DD74B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiSelector.API", "TaxiSelector.API\TaxiSelector.API.csproj", "{49768BD2-9022-4F63-9D7D-8D09CD5DD74B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiDispatcher.API", "TaxiDispatcher.API\TaxiDispatcher.API.csproj", "{75BC3FD1-DE42-40FD-A4DF-4DCCC85C95ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{E9C30950-09F7-407D-BC7A-30C0BAE238FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{E9C30950-09F7-407D-BC7A-30C0BAE238FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,9 +7,9 @@ namespace TaxiFinder.API.Controllers
     [Route("[controller]")]
     public class FinderController : ControllerBase
     {
-        private readonly TaxiFinderService _taxiFinderService;
+        private readonly Domain.TaxiFinder _taxiFinderService;
 
-        public FinderController(TaxiFinderService taxiFinderService)
+        public FinderController(Domain.TaxiFinder taxiFinderService)
         {
             this._taxiFinderService = taxiFinderService;
         }

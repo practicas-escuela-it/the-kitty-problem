@@ -13,3 +13,7 @@ C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\View\obj\Debug\net
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\View\obj\Debug\net6.0\View.pdb
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\View\obj\Debug\net6.0\View.genruntimeconfig.cache
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\View\obj\Debug\net6.0\ref\View.dll
+C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\View\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\View\bin\Debug\net6.0\Shared.dll
+C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\View\bin\Debug\net6.0\Shared.pdb
+C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\View\obj\Debug\net6.0\View.csproj.CopyComplete
