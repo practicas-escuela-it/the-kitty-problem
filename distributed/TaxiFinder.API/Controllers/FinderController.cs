@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using TaxiFinder.API.Domain;
 
 namespace TaxiFinder.API.Controllers
 {
@@ -7,17 +6,16 @@ namespace TaxiFinder.API.Controllers
     [Route("[controller]")]
     public class FinderController : ControllerBase
     {
-        private readonly Domain.TaxiFinder _taxiFinderService;
+        private readonly Domain.TaxiFinder _taxiFinder;
 
-        public FinderController(Domain.TaxiFinder taxiFinderService)
+        public FinderController()
         {
-            this._taxiFinderService = taxiFinderService;
         }
 
-        [HttpGet]
-        public IEnumerable<TaxiFound> Get()
+        [HttpPost]
+        public void ProposeCandidateTaxis(int userId)
         {
-            return this._taxiFinderService.Invoke();
+            this._taxiFinder.Find(userId);
         }
     }
 }

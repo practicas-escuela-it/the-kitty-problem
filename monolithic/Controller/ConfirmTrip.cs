@@ -15,8 +15,9 @@ namespace Controller
             this._tripRepository = tripRepository;
         }
 
-        public Trip Invoke(TaxiFound taxiFound, string destinationAddress)
+        public Trip Confirm(TaxiFound taxiFound, string destinationAddress)
         {
+            // Pasar a builder
             Trip trip = new Trip()
             {
                 TripId = new Random().Next(100),

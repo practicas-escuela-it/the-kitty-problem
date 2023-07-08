@@ -13,7 +13,7 @@ namespace TaxiDispatcher.API.Domain
             this._tripRepository = tripRepository;
         }
 
-        internal Trip Invoke(TaxiFound taxiFound, string destinationAddress)
+        internal Trip Confirm(TaxiFound taxiFound, string destinationAddress)
         {
             Trip trip = new Trip()
             {
@@ -30,11 +30,6 @@ namespace TaxiDispatcher.API.Domain
         private int GetDistance(string destinationAddress)
         {
             return new Random().Next(100);
-        }
-
-        internal Trip GetTrip(int id)
-        {
-            return this._tripRepository.Get(id);
         }
     }
 }

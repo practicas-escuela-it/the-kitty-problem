@@ -2,7 +2,7 @@
 
 namespace View.Domain
 {
-    internal interface IHttpRepository
+    internal interface TaxipRepository
     {
         internal string BaseUri { get; }
 

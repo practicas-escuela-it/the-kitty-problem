@@ -4,7 +4,7 @@ namespace TaxiFinder.API.Domain
 {
     public interface TaxiSupplierRepository
     {
-        List<TaxiSupplier> GetAllAvailable();
+        TaxiSupplier[] GetAllAvailable();
         void UpdateTaxiAvailability(int taxiId, bool isAvailable);
     }
 }

@@ -6,6 +6,8 @@ namespace TaxiSelector.API.Models
         {
 
         }
+
+        public int UserId { get; set; }
         public string DestinationAddress { get; set; }
         public bool IsCatRequired { get; set; }
         public bool IsPremiumCar { get; set; }

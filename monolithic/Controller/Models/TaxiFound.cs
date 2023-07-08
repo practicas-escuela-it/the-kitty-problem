@@ -17,8 +17,8 @@ namespace Controller.Models
             this.AcceptCat = taxi.AcceptCat;
             this.IsPremium = taxi.IsPremium;
         }
-
-        public int Id { get; set; }
+        
+        public int Id { get; private set; }
         public object Name { get; set; }
         public double Price { get; set; }
         public bool AcceptCat { get; set; }

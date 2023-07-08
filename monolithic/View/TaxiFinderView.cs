@@ -24,15 +24,5 @@ namespace View
                 new TaxiView(taxi).Interact();
             }
         }
-
-        internal bool IsTaxiSelected()
-        {
-            return this._taxisFound.Any();
-        }
-
-        internal IEnumerable<TaxiFound> GetTaxiFound()
-        {
-            return this._taxisFound;
-        }
     }
 }

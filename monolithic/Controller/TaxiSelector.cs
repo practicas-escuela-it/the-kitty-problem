@@ -36,19 +36,19 @@ namespace Controller
         {
             // ¿Pasar a Chan of Responsability?
 
-            List<TaxiFound> rett = this._taxiFounds.ToList();
+            List<TaxiFound> result = this._taxiFounds.ToList();
 
             if (this._criteria.IsCatRequired)
             {
-                rett = this._taxiFounds.Where(x => x.AcceptCat).ToList();
+                result = this._taxiFounds.Where(x => x.AcceptCat).ToList();
             }
 
             if (this._criteria.IsPremiumCar)
             {
-                rett = rett.Where(x => x.IsPremium).ToList();
+                result = result.Where(x => x.IsPremium).ToList();
             }
 
-            return rett.First();
+            return result.First();
         }
     }
 }

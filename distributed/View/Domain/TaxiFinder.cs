@@ -4,16 +4,18 @@ namespace View.Domain
 {
     internal class TaxiFinder
     {
-        private readonly IHttpRepository _httpRepository;
+        private readonly TaxiRepository _taxiRepository;
 
-        internal TaxiFinder(IHttpRepository httpRepository)
+        internal TaxiFinder(TaxiRepository taxiRepository)
         {
-            this._httpRepository = httpRepository;
+            this._taxiRepository = taxiRepository;
         }
 
         internal IEnumerable<TaxiFound> Invoke()
         {
-            return this._httpRepository.Get<IEnumerable<TaxiFound>>("Finder");
+            // TODO - ¿cómo se puede mejorar este código?
+            // en el libro plantea guardar este resultado en una memoria caché y que el servicio de TaxiSelector lo ela directo de allí
+            return this._taxiRepository.Get<IEnumerable<TaxiFound>>("Finder");
         }
     }
 }
