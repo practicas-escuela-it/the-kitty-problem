@@ -8,8 +8,9 @@ namespace TaxiFinder.API.Controllers
     {
         private readonly Domain.TaxiFinder _taxiFinder;
 
-        public FinderController()
+        public FinderController(Domain.TaxiFinder taxiFinder)
         {
+            this._taxiFinder = taxiFinder;
         }
 
         [HttpPost]

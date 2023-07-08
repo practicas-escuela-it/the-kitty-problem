@@ -16,6 +16,8 @@ C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\bin
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\bin\Debug\net6.0\CandidateTaxi.dll
+C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\bin\Debug\net6.0\CandidateTaxi.pdb
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\obj\Debug\net6.0\staticwebassets\msbuild.TaxiFinder.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\obj\Debug\net6.0\staticwebassets\msbuild.build.TaxiFinder.API.props
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TaxiFinder.API.props
@@ -30,5 +32,3 @@ C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\obj
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\obj\Debug\net6.0\TaxiFinder.API.pdb
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\obj\Debug\net6.0\TaxiFinder.API.genruntimeconfig.cache
 C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\obj\Debug\net6.0\ref\TaxiFinder.API.dll
-C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\bin\Debug\net6.0\Shared.dll
-C:\git\Personal\TheKittyProblem\the-kitty-problem\distributed\TaxiFinder.API\bin\Debug\net6.0\Shared.pdb

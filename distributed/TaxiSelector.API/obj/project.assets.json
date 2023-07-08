@@ -89,6 +89,16 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "CandidateTaxi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CandidateTaxi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CandidateTaxi.dll": {}
+        }
+      },
       "Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -227,6 +237,11 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
+    "CandidateTaxi/1.0.0": {
+      "type": "project",
+      "path": "../CandidateTaxi/CandidateTaxi.csproj",
+      "msbuildProject": "../CandidateTaxi/CandidateTaxi.csproj"
+    },
     "Shared/1.0.0": {
       "type": "project",
       "path": "../Shared/Shared.csproj",
@@ -235,6 +250,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CandidateTaxi >= 1.0.0",
       "Shared >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -276,6 +292,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\CandidateTaxi\\CandidateTaxi.csproj": {
+              "projectPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\CandidateTaxi\\CandidateTaxi.csproj"
+            },
             "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj": {
               "projectPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj"
             }

@@ -1,14 +1,10 @@
-using Shared.Models;
-
 namespace TaxiSelector.API.Domain
 {
     public class TaxiFound
     {
-        public TaxiFound(CandidateTaxi candidateTaxi)
+        public TaxiFound(CandidateTaxi.Models.CandidateTaxi candidateTaxi)
         {
             this.Id = candidateTaxi.TaxiId;
-            this.AcceptCat = candidateTaxi.AcceptCat;
-            this.IsPremium = candidateTaxi.IsPremium;
         }
 
         public int Id { get; set; }

@@ -1,6 +1,5 @@
-﻿using Shared;
-using Shared.Domain;
-using Shared.Models;
+﻿using CandidateTaxi.Domain;
+using Shared;
 using TaxiFinder.API.Domain;
 using TaxiSelector.API.Models;
 
@@ -36,18 +35,18 @@ namespace TaxiSelector.API.Domain
 
         private TaxiFound GetTaxiCandidate()
         {
-            CandidateTaxi[] candidateTaxis = this._getCandidateTaxis.Get(this._criteria.UserId);
-            IEnumerable<CandidateTaxi> rett = new List<CandidateTaxi>();
+            CandidateTaxi.Models.CandidateTaxi[] candidateTaxis = this._getCandidateTaxis.Get(this._criteria.UserId);
+            IEnumerable<CandidateTaxi.Models.CandidateTaxi> rett = new List<CandidateTaxi.Models.CandidateTaxi>();
 
-            if (this._criteria.IsCatRequired)
-            {
-                rett = candidateTaxis.Where(x => x.AcceptCat);
-            }
+            // if (this._criteria.IsCatRequired)
+            // {
+            //     rett = candidateTaxis.Where(x => x.AcceptCat);
+            // }
 
-            if (this._criteria.IsPremiumCar)
-            {
-                rett = rett.Where(x => x.IsPremium);
-            }
+            //if (this._criteria.IsPremiumCar)
+            //{
+            //    rett = rett.Where(x => x.IsPremium);
+            //}
 
             return new TaxiFound(rett.First());
         }

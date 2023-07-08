@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj",
+      "projectUniqueName": "c:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj",
+      "projectPath": "c:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\obj\\",
+      "outputPath": "c:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -2,6 +2,6 @@
 {
     public class TaxiSupplier
     {
-        public int Id { get; set; }
+        public int Id { get; init; }
     }
 }

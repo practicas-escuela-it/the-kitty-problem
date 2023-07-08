@@ -1,7 +1,6 @@
-using Shared.Models;
-using Shared.Repository.SQL;
+using CandidateTaxi.Repository.SQL;
 
-namespace Shared.Domain
+namespace CandidateTaxi.Domain
 {
     public class GetCandidateTaxis
     {
@@ -12,7 +11,7 @@ namespace Shared.Domain
             this._candidateTaxisRepository = new CandidateTaxisSQLRepository();
         }
 
-        public CandidateTaxi[] Get(int userId)
+        public Models.CandidateTaxi[] Get(int userId)
         {
             return this._candidateTaxisRepository.Get(userId);
         }

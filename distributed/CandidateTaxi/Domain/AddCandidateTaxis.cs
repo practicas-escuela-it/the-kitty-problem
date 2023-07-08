@@ -1,7 +1,6 @@
-using Shared.Models;
-using Shared.Repository.SQL;
+using CandidateTaxi.Repository.SQL;
 
-namespace Shared.Domain
+namespace CandidateTaxi.Domain
 {
     public class AddCandidateTaxis
     {
@@ -12,7 +11,7 @@ namespace Shared.Domain
             this._candidateTaxisRepository = new CandidateTaxisSQLRepository();
         }
 
-        public void Add(CandidateTaxi[] candidateTaxis)
+        public void Add(Models.CandidateTaxi[] candidateTaxis)
         {
             this._candidateTaxisRepository.Add(candidateTaxis);
         }

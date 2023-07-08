@@ -4,14 +4,14 @@
     "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\TaxiFinder.API\\TaxiFinder.API.csproj": {}
   },
   "projects": {
-    "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj": {
+    "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\CandidateTaxi\\CandidateTaxi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj",
-        "projectName": "Shared",
-        "projectPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\CandidateTaxi\\CandidateTaxi.csproj",
+        "projectName": "CandidateTaxi",
+        "projectPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\CandidateTaxi\\CandidateTaxi.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\obj\\",
+        "outputPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\CandidateTaxi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -98,8 +98,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\Shared\\Shared.csproj"
+              "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\CandidateTaxi\\CandidateTaxi.csproj": {
+                "projectPath": "C:\\git\\Personal\\TheKittyProblem\\the-kitty-problem\\distributed\\CandidateTaxi\\CandidateTaxi.csproj"
               }
             }
           }
