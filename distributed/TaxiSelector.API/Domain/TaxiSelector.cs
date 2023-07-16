@@ -35,20 +35,19 @@ namespace TaxiSelector.API.Domain
 
         private TaxiFound GetTaxiCandidate()
         {
-            CandidateTaxi.Models.CandidateTaxi[] candidateTaxis = this._getCandidateTaxis.Get(this._criteria.UserId);
-            IEnumerable<CandidateTaxi.Models.CandidateTaxi> rett = new List<CandidateTaxi.Models.CandidateTaxi>();
+            IEnumerable<CandidateTaxi.Models.CandidateTaxi> candidateTaxis = this._getCandidateTaxis.Get(this._criteria.UserId);
 
-            // if (this._criteria.IsCatRequired)
-            // {
-            //     rett = candidateTaxis.Where(x => x.AcceptCat);
-            // }
+            if (this._criteria.IsCatRequired)
+            {
+                candidateTaxis = candidateTaxis.Where(x => x.AcceptCat);
+            }
 
-            //if (this._criteria.IsPremiumCar)
-            //{
-            //    rett = rett.Where(x => x.IsPremium);
-            //}
+            if (this._criteria.IsPremiumCar)
+            {
+                candidateTaxis = candidateTaxis.Where(x => x.IsPremium);
+            }
 
-            return new TaxiFound(rett.First());
+            return new TaxiFound(candidateTaxis.First());
         }
     }
 }

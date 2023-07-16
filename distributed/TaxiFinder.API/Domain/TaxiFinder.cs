@@ -38,6 +38,8 @@ namespace TaxiFinder.API.Domain
                 TaxiId = taxi.Id,
                 UserId = userId,
                 SupplierId = supplier.Id,
+                IsPremium = taxi.IsPremium,
+                AcceptCat = taxi.AcceptCat
             };
         }
     }

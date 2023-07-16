@@ -7,5 +7,6 @@ namespace TaxiFinder.API.Models
         public double Price { get; set; }
         public bool IsAvailable { get; set; }
         public bool IsPremium { get; set; }
+        public bool AcceptCat { get; internal set; }
     }
 }

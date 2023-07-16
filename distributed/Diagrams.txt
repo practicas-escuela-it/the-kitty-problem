@@ -1,0 +1,30 @@
+@startuml
+
+skin rose
+
+title Component Diagram
+
+
+[View] as GUI
+[TaxiFinder.API] as Finder
+[TaxiSelector.API] as Selector
+[TaxiDispatcher.API] as Dispatcher
+
+database "SQL" {
+    [Cache]
+}
+
+GUI ..> ProposeCandidateTaxis : use
+GUI ..> GetPropsedCandidateTaxis : use
+
+ProposeCandidateTaxis - [Finder]
+GetPropsedCandidateTaxis - [Selector]
+
+Finder ..> HTTP : use
+
+Finder -- CandidateTaxi
+Selector -- CandidateTaxi
+Selector -- Dispatcher
+CandidateTaxi .. [Cache]
+
+@enduml

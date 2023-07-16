@@ -16,7 +16,7 @@ namespace TaxiSelector.API.Controllers
         }
 
         [HttpGet]
-        public TaxiFound Get(TaxiSelectorRequest request)
+        public TaxiFound GetPropsedCandidateTaxis(TaxiSelectorRequest request)
         {
             return this._taxiSelector.Select(request.TaxiSelectionCriteria);
         }
